@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Mehrwertsteuer</title>
+
+        <script>
+            function berechne()
+                {  
+                    var brutto = 0;
+
+                    var netto;
+
+                    var mwst = 0.19;
+
+                    var mwst_betrag;
+
+                    netto = parseFloat(document. MwStRechner.T1.value);
+
+                    mwst_betrag = netto * mwst;
+
+                    brutto = netto + mwst_betrag;
+
+                    document. MwStRechner.T2.value=mwst_betrag;
+
+                    document. MwStRechner.T3.value=brutto; 
+                    
+                }
+        </script>
+
+    </head>
+
+    <body>
+
+        <h2>Mehrwertsteuer</h2>
+
+        <form name="MwStRechner">
+
+        <p>Nettobetrag: <input type="text" name="T1" size="10"><br>
+
+        <input type="button" value="Berechne" onClick="berechne()"><br>
+
+        <p>MwSt: <input type="text" name="T2" size="20"></p>
+
+        <p>Bruttobetrag  <input type="text" name="T3" size="20"></p>
+        
+     </form>
+
+    </body>
+</html>
